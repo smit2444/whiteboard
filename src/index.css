@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Ensure smooth resizing */
+/* src/index.css (or src/styles.css) */
+@layer components {
+    .resize-box {
+      transition: width 0.2s ease, height 0.2s ease;
+    }
+  
+    .resize-box > .react-resizable-handle {
+      width: 12px;
+      height: 12px;
+      background-color: #ddd;
+      border-radius: 50%;
+      position: absolute;
+      right: -6px;
+      bottom: -6px;
+      cursor: se-resize;
+    }
+  
+    .resize-box > .react-resizable-handle:hover {
+      background-color: #aaa;
+    }
+  }
+  
